@@ -1,0 +1,243 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+article{
+    width: 70%;
+    background-color: rgb(6, 6, 56);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-out;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-avatar {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #667eea;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-avatar img:hover {
+    transform: scale(1.05);
+}
+
+.profile-avatar figcaption {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+}
+
+.profile-header h1 {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #667eea;
+    font-weight: 500;
+}
+
+.profile-bio {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10%;
+}
+
+.profile-bio h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.profile-bio p {
+    line-height: 1.6;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+
+.profile-hobbies,
+.profile-dislikes {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-hobbies h2,
+.profile-dislikes h2 {
+    font-size: 2rem;
+    color: #fff;
+    display: inline-block;
+}
+
+.profile-hobbies ul,
+.profile-dislikes ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.profile-hobbies li,
+.profile-dislikes li {
+    background: #f0f0f0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-left: 3px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.profile-dislikes li {
+    border-left-color: #667eea;
+}
+
+.profile-hobbies li:hover,
+.profile-dislikes li:hover {
+    background: #e8e8e8;
+    transform: translateX(4px);
+}
+
+.profile-social {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 1.5rem;
+}
+
+.profile-social h2 {
+    display: none;
+}
+
+.profile-social ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.profile-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: blue ;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-social a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.profile-social a:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+
+.profile-time {
+    margin-bottom: 2rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.profile-time h2 {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+#current-time {
+    display: block;
+    font-family: 'Courier New', monospace;
+    color: #667eea;
+}
+
+.time-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    word-break: break-all;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-hobbies ul,
+    .profile-dislikes ul {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-social ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body {
+        padding: 0.5rem;
+    }
+}
+
+/* Medium Screens */
+@media (max-width: 768px) {
+    .profile-card {
+        max-width: 90%;
+    }
+}
+

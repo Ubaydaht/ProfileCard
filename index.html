@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="body">
+        <article data-testid="test-profile-card" class="profile-card" role="region" aria-label="User Profile">
+            <!-- Avatar Section -->
+            <figure class="profile-avatar" data-testid="test-user-avatar">
+                <img src="ludo.PNG" alt="Profile photo of Ubaydah">
+                <figcaption>Profile Photo</figcaption>
+            </figure>
+
+            <!-- Name and Title -->
+            <header class="profile-header">
+                <h1 data-testid="test-user-name">Olasunkanmi Ubaydah</h1>
+                <p class="subtitle">Full Stack Developer</p>
+            </header>
+
+            <!-- Biography -->
+            <section class="profile-bio">
+                <h2>About</h2>
+                <p data-testid="test-user-bio">
+                    Passionate developer with 5 years of experience building web applications.
+                    Love creating intuitive user experiences and writing clean, maintainable code.
+    
+                </p>
+            </section>
+
+           
+
+            <!-- Hobbies -->
+            <section class="profile-hobbies">
+                <h2>Hobbies</h2>
+                <ul data-testid="test-user-hobbies">
+                    <li>Photography</li>
+                    <li>Hiking</li>
+                    <li>Reading Science Fiction</li>
+                    <li>Playing Guitar</li>
+                    <li>Cooking</li>
+                </ul>
+            </section>
+
+            
+
+            <!-- Dislikes -->
+            <section class="profile-dislikes">
+                <h2>Dislikes</h2> <br>
+                <ul data-testid="test-user-dislikes">
+                    <li>Unnecessary complexity</li>
+                    <li>Poor documentation</li>
+                    <li>Slow internet</li>
+                    <li>Interruptions during focus time</li>
+                </ul>
+            </section>
+             <!-- Current Time -->
+            <section class="profile-time">
+                <h2>Current Time</h2>
+                <time id="current-time" datetime="" data-testid="test-user-time">
+                    <span class="time-value">Loading...</span>
+                    <span class="time-unit"> epoch time in milliseconds</span>
+                </time>
+            </section>
+
+            <!-- Social Links -->
+            <nav class="profile-social" aria-label="Social media links">
+                <h2 class="sr-only">Connect with me</h2>
+                <ul data-testid="test-user-social-links">
+                    <li data-testid="test-user-social-github">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                            <span class="icon">GitHub</span>
+                        </a>
+                    </li>
+                    <li data-testid="test-user-social-linkedin">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                            <span class="icon">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li data-testid="test-user-social-twitter">
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
+                            <span class="icon">Twitter</span>
+                        </a>
+                    </li>
+                    <li data-testid="test-user-social-mail">
+                        <a href="mailto:alex@example.com" aria-label="Send email">
+                            <span class="icon">Email</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </article>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
